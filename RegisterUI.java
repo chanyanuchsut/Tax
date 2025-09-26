@@ -102,7 +102,6 @@ public class RegisterUI extends JFrame {
             String pass = new String(passwordField.getPassword());
             String confirm = new String(confirmField.getPassword());
 
-            // ตรวจสอบข้อมูล
             if(id.length() != 13) {
                 JOptionPane.showMessageDialog(this, "เลขประจำตัวผู้เสียภาษีต้องมี 13 หลัก", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
@@ -132,8 +131,8 @@ public class RegisterUI extends JFrame {
                 return;
             }
 
-            this.dispose(); // ปิดหน้าลงทะเบียน
-            new Login();     // เปิดหน้าล็อกอิน
+            this.dispose(); 
+            new Login();     
         });
 
         right.add(header);
