@@ -84,7 +84,6 @@ public class Password extends JFrame {
         changeBtn.setPreferredSize(new Dimension(150, 40));
         btnPanel.add(changeBtn);
 
-        // Action เปลี่ยนรหัสผ่าน
         changeBtn.addActionListener(e -> {
             String id = taxIdField.getText().trim();
             String first = firstNameField.getText().trim();
@@ -168,8 +167,7 @@ public class Password extends JFrame {
             }
 
         });
-
-        // เพิ่ม Component ขวา
+        
         right.add(header);
         right.add(taxIdField);
         right.add(Box.createVerticalStrut(10));

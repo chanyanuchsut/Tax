@@ -70,7 +70,6 @@ public class Login extends JFrame {
         ID.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
         password.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
 
-        // Forgot password
         JPanel forgotPanel = new JPanel(new BorderLayout());
         forgotPanel.setOpaque(false);
         JLabel forgot = new JLabel("ลืมรหัสผ่าน");
@@ -80,12 +79,11 @@ public class Login extends JFrame {
         forgotPanel.add(forgot, BorderLayout.EAST);
         forgotPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 20));
 
-        // Mouse listener สำหรับ forgot password
         forgot.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                dispose();          // ปิดหน้าล็อกอินปัจจุบัน
-                new Password();      // เปิดหน้าจอเปลี่ยนรหัสผ่าน
+                dispose();          
+                new Password();     
             }
 
             @Override
@@ -99,7 +97,6 @@ public class Login extends JFrame {
             }
         });
 
-        // Checkbox
         JPanel agreePanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 0));
         agreePanel.setOpaque(false);
         JCheckBox agree = new JCheckBox("ตกลงยอมรับเงื่อนไขการใช้งาน และนโยบายความเป็นส่วนตัว");
@@ -111,13 +108,11 @@ public class Login extends JFrame {
         WebButtonStyle.apply(loginBtn, thaiFontNormal, new Color(13, 43, 97), new Color(19, 61, 132));
         WebButtonStyle.apply(registerBtn, thaiFontNormal, new Color(13, 43, 97), new Color(19, 61, 132));
 
-        // ปุ่ม Register
         registerBtn.addActionListener(e -> {
             dispose();
-            new RegisterUI(); // เปิดหน้าลงทะเบียน
+            new RegisterUI(); 
         });
 
-        // ปุ่ม Login
         loginBtn.addActionListener(e -> {
             String inputID = ID.getText().trim();
             String inputPass = new String(password.getPassword());
