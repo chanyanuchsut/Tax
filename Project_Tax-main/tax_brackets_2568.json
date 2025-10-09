@@ -1,0 +1,45 @@
+{
+  "year": 2568,
+  "taxBrackets": [
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": 0,
+      "rate": 0
+    },
+    {
+      "minIncome": 0,
+      "maxIncome": null,
+      "rate": 0
+    }
+  ]
+}
