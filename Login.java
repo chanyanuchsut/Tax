@@ -1,3 +1,4 @@
+//package GUI;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -128,7 +129,7 @@ public class Login extends JFrame {
             }
 
             Map<String, String> userMap = new HashMap<>();
-            try (BufferedReader br = new BufferedReader(new FileReader("user.csv"))) {
+            try (BufferedReader br = new BufferedReader(new FileReader("users.csv"))) {
                 String line;
                 String currentID = null;
                 while ((line = br.readLine()) != null) {
@@ -147,7 +148,7 @@ public class Login extends JFrame {
             }
 
             if (userMap.containsKey(inputID) && userMap.get(inputID).equals(inputPass)) {
-                JOptionPane.showMessageDialog(this, "เข้าสู่ระบบสำเร็จ", "Success", JOptionPane.INFORMATION_MESSAGE);
+                
             } else {
                 JOptionPane.showMessageDialog(this, "ID หรือ รหัสผ่านไม่ถูกต้อง", "Error", JOptionPane.ERROR_MESSAGE);
             }

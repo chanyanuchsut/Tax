@@ -1,6 +1,8 @@
+//package GUI;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.BufferedWriter;
@@ -120,7 +122,7 @@ public class RegisterUI extends JFrame {
             }
 
             // บันทึกลงไฟล์
-            try(BufferedWriter bw = new BufferedWriter(new FileWriter("user.csv", true))){
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter("users.csv", true))){
                 bw.write("ID: " + id + "\n");
                 bw.write("ชื่อ: " + fname + "\n");
                 bw.write("นามสกุล: " + lname + "\n");

@@ -1,5 +1,7 @@
+//package GUI;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -106,7 +108,7 @@ public class Password extends JFrame {
                 return;
             }
 
-            File file = new File("user.csv");
+            File file = new File("users.csv");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(this, "ไม่พบไฟล์ผู้ใช้", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
@@ -167,7 +169,7 @@ public class Password extends JFrame {
             }
 
         });
-        
+
         right.add(header);
         right.add(taxIdField);
         right.add(Box.createVerticalStrut(10));
