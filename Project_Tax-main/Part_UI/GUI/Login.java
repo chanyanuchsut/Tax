@@ -113,7 +113,7 @@ public class Login extends JFrame {
             dispose();
             new RegisterUI(); 
         });
-
+        
         loginBtn.addActionListener(e -> {
             String inputID = ID.getText().trim();
             String inputPass = new String(password.getPassword());
@@ -127,7 +127,11 @@ public class Login extends JFrame {
                 JOptionPane.showMessageDialog(this, "คุณต้องยอมรับเงื่อนไขก่อนเข้าสู่ระบบ", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-
+            if (inputID.equals("admin111") && inputPass.equals("AdminPass")) {
+                dispose();
+                new AdminPanelUI();
+                return;
+            }
             Map<String, String> userMap = new HashMap<>();
             try (BufferedReader br = new BufferedReader(new FileReader("users.csv"))) {
                 String line;
@@ -147,8 +151,10 @@ public class Login extends JFrame {
                 return;
             }
 
+            
             if (userMap.containsKey(inputID) && userMap.get(inputID).equals(inputPass)) {
-                
+                dispose();
+                new Income(inputID).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "ID หรือ รหัสผ่านไม่ถูกต้อง", "Error", JOptionPane.ERROR_MESSAGE);
             }
